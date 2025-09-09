@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-purple: #7124a8;
+  --secondary-purple: #9c4ed4;
+  --background-dark: #1a0a2e;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  background: var(--background-dark);
+  color: #ffffff;
+  overflow-x: hidden;
+  /* Peningkatan ukuran font dasar untuk mobile */
+  font-size: 16px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--primary-purple), var(--secondary-purple));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, var(--secondary-purple), var(--primary-purple));
+}
+
+/* Selection styles */
+::selection {
+  background: rgba(113, 36, 168, 0.3);
+  color: white;
+}
+
+/* Focus styles untuk aksesibilitas */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--primary-purple);
+  outline-offset: 2px;
+}
+
+/* Smooth animations */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Mobile-specific styles untuk interaksi touch */
+@media (max-width: 768px) {
+  /* Tambah area tap yang lebih besar untuk elemen interaktif */
+  button, a[role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Kurangi perbedaan ukuran heading untuk hemat ruang vertikal */
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  h2 {
+    font-size: 2rem !important;
+  }
+  
+  h3 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Touch-friendly tap animations */
+@media (hover: none) and (pointer: coarse) {
+  .tap-scale {
+    transition: transform 0.1s ease;
+  }
+  
+  .tap-scale:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Scrollbar hiding untuk horizontal scroll mobile */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

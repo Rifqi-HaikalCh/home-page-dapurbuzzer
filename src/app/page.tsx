@@ -8,16 +8,18 @@ import CTASection from '@/components/sections/CTASection';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#1a0a2e]">
+    <div className="min-h-screen bg-[#0D0618] w-full">
       <Header />
       
-      <main>
-        <HeroSection />
-        <ClientShowcase />
-        <CategoryGrid />
-        <RecommendedInfluencers />
-        <Testimonials />
-        <CTASection />
+      <main className="w-full pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <HeroSection />
+          <ClientShowcase />
+          <CategoryGrid />
+          <RecommendedInfluencers />
+          <Testimonials />
+          <CTASection />
+        </div>
       </main>
     </div>
   );

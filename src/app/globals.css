@@ -18,7 +18,7 @@ html {
 
 body {
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
-  background: var(--background-dark);
+  background: #0D0618;
   color: #ffffff;
   overflow-x: hidden;
   /* Peningkatan ukuran font dasar untuk mobile */
@@ -73,16 +73,16 @@ input:focus-visible {
   }
   
   /* Kurangi perbedaan ukuran heading untuk hemat ruang vertikal */
-  h1 {
-    font-size: 2.5rem !important;
+  body h1 {
+    font-size: 2.5rem;
   }
   
-  h2 {
-    font-size: 2rem !important;
+  body h2 {
+    font-size: 2rem;
   }
   
-  h3 {
-    font-size: 1.5rem !important;
+  body h3 {
+    font-size: 1.5rem;
   }
 }
 

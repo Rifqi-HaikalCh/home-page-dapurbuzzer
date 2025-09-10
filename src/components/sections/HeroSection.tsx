@@ -6,8 +6,8 @@ import Button from '@/components/elements/Button';
 
 const HeroSection: React.FC = () => {
   return (
-    // Kurangi tinggi hero di mobile agar konten di bawahnya terlihat
-    <section className="relative h-[60vh] md:min-h-screen flex items-center justify-center overflow-hidden">
+    // Gunakan min-height yang fleksibel dengan padding konsisten
+    <section className="relative min-h-[60vh] md:min-h-screen flex items-center justify-center overflow-hidden py-24 md:py-32">
       {/* Background gradient yang bergerak */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#1a0a2e] via-[#16213e] to-[#0f3460]">
         <div className="absolute inset-0 bg-gradient-to-r from-[#7124a8]/20 to-[#9c4ed4]/20 animate-pulse" />
@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-12 leading-tight">
             <span className="bg-gradient-to-r from-[#7124a8] to-[#9c4ed4] bg-clip-text text-transparent">
               Amplify
             </span>
@@ -51,7 +51,7 @@ const HeroSection: React.FC = () => {
         
         {/* Subtitle */}
         <motion.p
-          className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed"
+          className="text-xl md:text-2xl text-gray-300 mb-16 max-w-2xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
@@ -72,7 +72,7 @@ const HeroSection: React.FC = () => {
         
         {/* Stats atau highlight numbers */}
         <motion.div
-          className="mt-8 md:mt-16 grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto"
+          className="mt-20 md:mt-24 grid grid-cols-3 gap-8 md:gap-16 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}

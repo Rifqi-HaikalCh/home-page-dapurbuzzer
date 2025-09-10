@@ -7,7 +7,7 @@ import Button from '@/components/elements/Button';
 
 const CTASection: React.FC = () => {
   return (
-    <section className="py-12 md:py-20 bg-gradient-to-b from-black/30 to-[#1a0a2e]">
+    <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         {/* Background effects */}
         <div className="relative">
@@ -40,7 +40,7 @@ const CTASection: React.FC = () => {
               
               {/* CTA Buttons - Susun tombol CTA secara vertikal agar mudah di-tap */}
               <motion.div
-                className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center mb-12 md:mb-16 w-full max-w-md md:max-w-none mx-auto"
+                className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-center mb-12 md:mb-16 w-full max-w-md md:max-w-none mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
@@ -85,13 +85,13 @@ const CTASection: React.FC = () => {
             
             {/* Feature highlights */}
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-4xl mx-auto"
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto mt-12 md:mt-20"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="text-center bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 md:p-6 hover:border-[#7124a8]/30 transition-all duration-300 hover:scale-105 tap-scale">
+              <div className="text-center bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 md:p-8 hover:border-[#7124a8]/30 transition-all duration-300 hover:scale-105 tap-scale">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-[#7124a8] to-[#9c4ed4] rounded-lg flex items-center justify-center mx-auto mb-3 md:mb-4">
                   <Zap className="text-white" size={20} />
                 </div>
@@ -99,7 +99,7 @@ const CTASection: React.FC = () => {
                 <p className="text-gray-400 text-xs md:text-sm">Get started in just 5 minutes with our streamlined onboarding process</p>
               </div>
               
-              <div className="text-center bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 md:p-6 hover:border-[#7124a8]/30 transition-all duration-300 hover:scale-105 tap-scale">
+              <div className="text-center bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 md:p-8 hover:border-[#7124a8]/30 transition-all duration-300 hover:scale-105 tap-scale">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-[#7124a8] to-[#9c4ed4] rounded-lg flex items-center justify-center mx-auto mb-3 md:mb-4">
                   <Users className="text-white" size={20} />
                 </div>
@@ -107,7 +107,7 @@ const CTASection: React.FC = () => {
                 <p className="text-gray-400 text-xs md:text-sm">All our influencers are verified and vetted for quality and authenticity</p>
               </div>
               
-              <div className="text-center bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 md:p-6 hover:border-[#7124a8]/30 transition-all duration-300 hover:scale-105 tap-scale">
+              <div className="text-center bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 md:p-8 hover:border-[#7124a8]/30 transition-all duration-300 hover:scale-105 tap-scale">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-[#7124a8] to-[#9c4ed4] rounded-lg flex items-center justify-center mx-auto mb-3 md:mb-4">
                   <svg className="text-white" width={20} height={20} fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>

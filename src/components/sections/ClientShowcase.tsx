@@ -21,7 +21,7 @@ const ClientShowcase: React.FC = () => {
   const duplicatedClients = [...clients, ...clients];
 
   return (
-    <section className="py-8 md:py-16 bg-black/10">
+    <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         {/* Title - lebih compact untuk mobile */}
         <motion.div
@@ -96,7 +96,7 @@ const ClientShowcase: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex flex-col md:flex-row items-center gap-4 md:gap-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl md:rounded-full px-6 md:px-8 py-4">
+          <div className="inline-flex flex-col md:flex-row items-center gap-6 md:gap-12 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl md:rounded-full px-6 md:px-8 py-6">
             <div className="text-center">
               <div className="text-xl md:text-2xl font-bold text-[#9c4ed4]">98%</div>
               <div className="text-xs text-gray-300">Client Satisfaction</div>

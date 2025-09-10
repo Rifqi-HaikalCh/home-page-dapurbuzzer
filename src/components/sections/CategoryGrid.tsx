@@ -67,7 +67,7 @@ const CategoryGrid: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-gradient-to-b from-transparent to-black/20">
+    <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         {/* Section header */}
         <motion.div

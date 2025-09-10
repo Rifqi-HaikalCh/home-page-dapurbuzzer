@@ -79,7 +79,7 @@ const Testimonials: React.FC = () => {
 
   return (
     <section 
-      className="py-12 md:py-20 bg-gradient-to-b from-transparent to-black/30"
+      className="py-16 md:py-24"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
@@ -181,7 +181,7 @@ const Testimonials: React.FC = () => {
 
         {/* Statistics */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-12 md:mt-16 max-w-4xl mx-auto"
+          className="flex justify-center items-center flex-wrap gap-8 mt-12 md:mt-16 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}

@@ -91,7 +91,7 @@ const RecommendedInfluencers: React.FC = () => {
 
   return (
     <section 
-      className="py-20 bg-gradient-to-b from-black/20 to-transparent"
+      className="py-16 md:py-24"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
